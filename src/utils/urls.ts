@@ -20,7 +20,9 @@ export const urlWithQueryParams = (url: string, queryParams: QueryParams) => {
 };
 
 export function isValidUrl(string?: string) {
-  if (!string) return false;
+  if (!string) {
+    return false;
+  }
   try {
     new URL(string);
     return true;

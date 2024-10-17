@@ -15,21 +15,17 @@ export const generatePinataKey = async () => {
 };
 
 export async function uploadFile(
-  selectedFile: File | undefined,
+  imageBlob: Blob | undefined,
   keyToUse: string,
 ) {
-  if (!selectedFile) {
+  if (!imageBlob) {
     console.log('no file provided!');
     return;
   }
   try {
     const formData = new FormData();
-    formData.append('file', selectedFile);
-
-    const metadata = JSON.stringify({
-      name: `${selectedFile.name}`,
-    });
-    formData.append('pinataMetadata', metadata);
+    // TODO: File naming rather than image.png
+    formData.append('file', imageBlob, 'image.png');
 
     const options = JSON.stringify({
       cidVersion: 1,

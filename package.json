@@ -31,6 +31,7 @@
     "@types/react-calendar-heatmap": "^1.6.7",
     "@types/uuid": "^10.0.0",
     "d3": "^7.9.0",
+    "html-to-image": "^1.11.11",
     "is-ipfs": "^8.0.4",
     "lodash": "^4.17.21",
     "moment": "^2.30.1",
